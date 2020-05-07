@@ -5,67 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <script href="main.js"></script>
-    <script>
-        var random = 1;
-
-        function randomNumber(max) {
-            random = Math.floor(Math.random() * Math.floor(max));
-            transform();
-        }
-
-        function transform() {
-            switch (random) {
-                case 1: 
-                    document.getElementById('square1').classList.add('transformed');
-                    break;
-                case 2: 
-                    document.getElementById('square2').classList.add('transformed');
-                    break;
-                case 3:
-                    document.getElementById('square3').classList.add('transformed');
-                    break;
-                case 4: 
-                    document.getElementById('square4').classList.add('transformed');
-                    break;
-                case 5: 
-                    document.getElementById('square5').classList.add('transformed');
-                    break;
-                case 6: 
-                    document.getElementById('square6').classList.add('transformed');
-                    break;
-                case 7:
-                    document.getElementById('square7').classList.add('transformed');
-                    break;
-                case 8: 
-                    document.getElementById('square8').classList.add('transformed');
-                    break;
-                case 9: 
-                    document.getElementById('square9').classList.add('transformed');
-                    break;
-                default:
-                    randomNumber(9);
-                    break;
-            }
-        }
-    </script>
     <title>Document</title>
 </head>
 
 <body>
     <div class="row">
-        <div class="inRow" id="square1" onclick="randomNumber(9)"></div>
-        <div class="inRow" id="square2" onclick="randomNumber(9)"></div>
-        <div class="inRow" id="square3" onclick="randomNumber(9)"></div>
+        <div class="inRow transformed" id="square1" onclick="randomNumber(9)"></div>
+        <div class="inRow notTransformed" id="square2"></div>
+        <div class="inRow notTransformed" id="square3"></div>
     </div>
     <div class="row">
-        <div class="inRow" id="square4" onclick="randomNumber(9)"></div>
-        <div class="inRow" id="square5" onclick="randomNumber(9)"></div>
-        <div class="inRow" id="square6" onclick="randomNumber(9)"></div>
+        <div class="inRow notTransformed" id="square4"></div>
+        <div class="inRow notTransformed" id="square5"></div>
+        <div class="inRow notTransformed" id="square6"></div>
     </div>
     <div class="row">
-        <div class="inRow" id="square7" onclick="randomNumber(9)"></div>
-        <div class="inRow" id="square8" onclick="randomNumber(9)"></div>
-        <div class="inRow" id="square9" onclick="randomNumber(9)"></div>
+        <div class="inRow notTransformed" id="square7"></div>
+        <div class="inRow notTransformed" id="square8"></div>
+        <div class="inRow notTransformed" id="square9"></div>
     </div>
 </body>
 
