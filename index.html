@@ -4,104 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
-    <script href="main.js"></script>
+    <script src="main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script>
-        var random = 1;
-        
-        function clicked(active) {
-            getRandomNumber(9);
-            if (random == active) {
-                clicked(active);
-            } else {
-                display();
-            }
-        }
-
-        function getRandomNumber(max) {
-            random = Math.floor(Math.random() * Math.floor(max));
-        }
-
-        function display() {
-            if (random == 0) {
-                getRandomNumber(9);
-            }
-
-            if (random == 1) {
-                document.getElementById('square1').style.display = 'block';
-            } else {
-                document.getElementById('square1').style.display = 'none';
-            }
-
-            if (random == 2) {
-                document.getElementById('square2').style.display = 'block';
-            } else {
-                document.getElementById('square2').style.display = 'none';
-            }
-
-            if (random == 3) {
-                document.getElementById('square3').style.display = 'block';
-            } else {
-                document.getElementById('square3').style.display = 'none';
-            }
-
-            if (random == 4) {
-                document.getElementById('square4').style.display = 'block';
-            } else {
-                document.getElementById('square4').style.display = 'none';
-            }
-
-            if (random == 5) {
-                document.getElementById('square5').style.display = 'block';
-            } else {
-                document.getElementById('square5').style.display = 'none';
-            }
-
-            if (random == 6) {
-                document.getElementById('square6').style.display = 'block';
-            } else {
-                document.getElementById('square6').style.display = 'none';
-            }
-
-            if (random == 7) {
-                document.getElementById('square7').style.display = 'block';
-            } else {
-                document.getElementById('square7').style.display = 'none';
-            }
-
-            if (random == 8) {
-                document.getElementById('square8').style.display = 'block';
-            } else {
-                document.getElementById('square8').style.display = 'none';
-            }
-
-            if (random == 9) {
-                document.getElementById('square9').style.display = 'block';
-            } else {
-                document.getElementById('square9').style.display = 'none';
-            }
-        }
+            $("#square1").animate({
+                borderColor: "#fff",
+            }, 200);
     </script>
     <title>Document</title>
 </head>
 
 <body>
-    <table>
-        <tr>
-            <td onclick="clicked(1)"><img src="circle.png" id="square1"></td>
-            <td onclick="clicked(2)"><img src="circle.png" id="square2"></td>
-            <td onclick="clicked(3)"><img src="circle.png" id="square3"></td>
-        </tr>
-        <tr>
-            <td onclick="clicked(4)"><img src="circle.png" id="square4"></td>
-            <td onclick="clicked(5)"><img src="circle.png" id="square5"></td>
-            <td onclick="clicked(6)"><img src="circle.png" id="square6"></td>
-        </tr>
-        <tr>
-            <td onclick="clicked(7)"><img src="circle.png" id="square7"></td>
-            <td onclick="clicked(8)"><img src="circle.png" id="square8"></td>
-            <td onclick="clicked(9)"><img src="circle.png" id="square9"></td>
-        </tr>
-    </table>
+    <div class="row">
+        <div id="square1" class="inRow" onclick="transform('square1')"></div>
+        <div id="square2" class="inRow" onclick="transform('square2')"></div>
+        <div id="square3" class="inRow" onclick="transform('square3')"></div>
+    </div>
+    <div class="row">
+        <div id="square4" class="inRow" onclick="transform('square4')"></div>
+        <div id="square5" class="inRow" onclick="transform('square5')"></div>
+        <div id="square6" class="inRow" onclick="transform('square6')"></div>
+    </div>
+    <div class="row">
+        <div id="square7" class="inRow" onclick="transform('square7')"></div>
+        <div id="square8" class="inRow" onclick="transform('square8')"></div>
+        <div id="square9" class="inRow" onclick="transform('square9')"></div>
+    </div>
 </body>
 
 </html>
